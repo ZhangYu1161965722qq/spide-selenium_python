@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用说明</title>
+
+    <style type="text/css">
+        div{
+            width: 60%;
+            /* text-align: center; */
+            margin: 0 auto;
+        }
+
+        .btn{
+            font-size: large;
+            padding: 0.5em;
+            border-radius: 10px;
+            border-width: 1px;
+            background-color: rgb(0, 0, 0);
+            color: #ffffff;
+        }
+
+        .btn:hover{
+            background-color: aqua;
+            color: black;
+        }
+
+        .disable_btn{
+            font-size: large;
+            padding: 0.5em;
+            border-radius: 10px;
+            border-width: 1px;
+            background-color: rgb(228, 227, 227);
+            color: #b0b0b0;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        function buttonDisable(btn){
+            btn.disabled=true;
+            // btn.style.visibility=hidden;
+            btn.className="disable_btn";
+        }
+
+    </script>
+
+</head>
+<body>
+        <div>
+            <h4>1.提前配置（程序同目录下）：</h3>
+            <h4> &nbsp &nbsp &nbsp &nbsp “步骤.xlxs”配置自动运行的步骤（操作不变可以不修改），</h4>
+            <h4>&nbsp &nbsp &nbsp &nbsp “数据.xlsx”配置要输入到网页的数据。</h4>
+
+            <h2>2.操作：在之后自动打开的网页，若有验证码，请手动登录后，自动继续。</h2>
+
+            <div><input id="btn_start" class="btn" type="button" value="开始运行" onclick="buttonDisable(this)" title="点击按钮开始运行"></div>
+        </div>
+
+</body>
+</html>
